@@ -1,0 +1,39 @@
+{
+	
+	"gameName":"Oops",
+	"gameImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmzKltvlQmvaFBVZClgWcBV2drY-zgDeEXLJJW-kM8p-yaOYkzfg",
+	"createdBy":"sushmita",
+	"createdOn":"2018-05-05",
+	"gameType":{
+		"gameTypeId": 1,
+		"gameTypeName": "Single-Player-Timer-Based-Game",
+		"gameTypeDescription": "A single player Timer Based game is a video game where input from only one player is expected throughout the course of the gaming session. A single-player game is usually a game that can only be played by one person, while single-player mode is usually a game mode designed to be played by a single-player, though the game also contains multi-player modes"
+		
+	},
+	"gameDescription":"Object means a real word entity such as pen, chair, table etc. Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects..",
+	"gameRules":"1. Do not resize the browser during test,2. Never click back button on browser, 3. Avoid using scroll button on your mouse if present, 4. Click SUBMIT button to submit your exam.",
+	"categoryId":null ,
+	"userId":2,
+	"questionLevels":{
+	
+		"easyLevel":5,
+		"mediumLevel":5,
+		"advancedLevel":5
+	},
+	"questionTime":{
+	
+		"easyQuestionsTime":10,
+		"mediumQuestionsTime":15,
+		"advanceQuestionsTime":20
+	},
+	"questionScore":{
+	
+		"easyQuestionsScore":5,
+		"mediumQuestionsScore":10,
+		"advanceQuestionsScore":15
+	},
+	"topic":{
+		
+	},
+	"questions":null
+}

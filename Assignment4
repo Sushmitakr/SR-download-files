@@ -1,0 +1,37 @@
+Ques1:
+
+#include<stdio.h>
+#include<unistd.h>
+
+int main()
+{
+int pid;
+pid = fork();
+if(pid == 0)
+{
+printf("In child process:\n Child id is:%d\n Parent id is:%d\n",getpid(),getppid());
+printf("name:Naina\trollno:36\tdob:31");
+printf("name:sushmita\trollno:82\tdob:26");
+}
+else
+if(pid > 0)
+{
+printf("In parent process\n");
+printf("name:Naina\trollno:36\tdob:31");
+printf("name:sushmita\trollno:82\tdob:26");
+
+}
+else
+printf("fork failed");
+}
+
+Output:
+
+dac@ACTS10:~/Desktop/dir2> vi fork.c
+dac@ACTS10:~/Desktop/dir2> gcc fork.c
+dac@ACTS10:~/Desktop/dir2> ./a.out
+In parent process
+name:Naina      rollno:36       dob:31name:sushmita     rollno:82       dob:26In child process:
+ Child id is:2059
+ Parent id is:2058
+name:Naina      rollno:36       dob:31name:sushmita     rollno:82       dob:26

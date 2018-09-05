@@ -1,0 +1,119 @@
+Ques2-
+
+dac@ACTS10:~> pkill test.sh
+
+Ques3-
+
+cat fork.txt | grep -n "the"
+1:It's pretty hard to see how these would even be useful.
+2:Well, since this is an IPC document, let's put a fork() in the mix and see what happens.
+3:Pretend that you are a top federal agent assigned to get a child process to send the word "test" to
+4:the parent.
+5:Not very glamorous, but no one ever said computer science would be the X-Files, Mulder.
+6:First, we'll have the parent make a pipe. Secondly, we'll fork().
+7:Now, the fork() man page tells us that the child will receive a copy of all the parent's file
+8:descriptors, and this includes a copy of the pipe's file descriptors. Alors, the child will be able to
+9:send stuff to the write-end of the pipe, and the parent will get it off the read-end.
+
+dac@ACTS10:~/Desktop> cat fork.txt | grep -n "the" | wc -l 
+9
+
+
+Ques4-
+
+dac@ACTS10:~/Desktop> date
+Fri Aug 19 12:21:55 IST 2016
+
+dac@ACTS10:~/Desktop> cal
+     August 2016    
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+dac@ACTS10:~/Desktop> dir
+total 88
+-rw-r--r-- 1 dac users    38 Aug 18 17:36 \
+lrwxrwxrwx 1 dac users    42 Aug 13 21:09 codeblocks.desktop -> /usr/share/applications/codeblocks.desktop
+-rwxrwxrwx 1 dac users    52 Aug 19 11:24 count.sh
+-rwxrwxrwx 1 dac users    32 Aug 19 11:25 count.txt
+-rw-r--r-- 1 dac users 14228 Aug 18 16:41 DAC.xlsx
+drwxr-xr-x 2 dac users  4096 Aug 18 12:31 dir2
+lrwxrwxrwx 1 dac users    41 Aug 13 20:46 filezilla.desktop -> /usr/share/applications/filezilla.desktop
+-rw-r--r-- 1 dac users   694 Aug 19 11:40 fork.txt
+-rwxr--r-- 1 dac users   254 Feb 12  2016 kinfocenter.desktop
+-rwxr--r-- 1 dac users   260 Feb 12  2016 MozillaFirefox.desktop
+drwxr-xr-x 2 dac users  4096 Aug 18 18:02 NainaShushmita
+-rwxr--r-- 1 dac users   319 Feb 12  2016 Office.desktop
+drwxr-xr-x 4 dac users  4096 Aug 18 17:09 OS
+-rw-r--r-- 1 dac users    34 Aug 19 11:26 shell.file
+-rw-r--r-- 1 dac users     0 Aug 19 11:29 shell.sh
+-rwxrwxrwx 1 dac users    21 Aug 19 12:16 sshell.sh
+-rwxr--r-- 1 dac users   118 Feb 12  2016 Support.desktop
+-rwxr--r-- 1 dac users   238 Feb 12  2016 SuSE.desktop
+drwxr-xr-x 2 dac users  4096 Aug 18 17:28 symlink.file
+-rw-r--r-- 1 dac users    38 Aug 18 17:54 test1.sh
+-rwxrwxrwx 1 dac users    38 Aug 18 17:48 test.sh
+drwxr-xr-x 2 dac users  4096 Aug 18 16:47 tmp
+
+dac@ACTS10:~/Desktop> ps
+  PID TTY          TIME CMD
+ 1695 pts/1    00:00:00 bash
+ 1788 pts/1    00:00:00 cat
+ 2317 pts/1    00:00:00 ps
+dac@ACTS10:~/Desktop> ps -aux
+
+Ques5-
+
+dac@ACTS10:~/Desktop> vim text4.sh
+dac@ACTS10:~/Desktop> chmod 777 text4.sh
+dac@ACTS10:~/Desktop> ./text4.sh
+3
+
+dac@ACTS10:~/Desktop> cat text4.sh
+#!/bin/bash
+
+let sum=0
+for num in 1 2
+do
+ let "sum=$sum+$num"
+done
+echo $sum
+
+dac@ACTS10:~/Desktop> who
+dac      :0           2016-08-19 16:06 (console)
+dac      pts/0        2016-08-19 16:06 (:0)
+dac      pts/1        2016-08-19 16:20 (:0)
+dac      pts/2        2016-08-19 17:24
+dac@ACTS10:~/Desktop> who -Hu
+NAME     LINE         TIME             IDLE          PID COMMENT
+dac      :0           2016-08-19 16:06   ?          1278 (console)
+dac      pts/0        2016-08-19 16:06 01:19        1414 (:0)
+dac      pts/1        2016-08-19 16:20   .          1950 (:0)
+dac      pts/2        2016-08-19 17:24   .          2314
+
+
+Ques6-
+
+#!/bin/bash 
+let sum=0
+
+if [$# -eq 0];
+then
+echo `stderr`
+
+else
+echo "first argument is" $1
+echo "second argument is" $2
+sum=`expr $1 + $2`
+echo "$sum"
+fi
+
+
+
+
+
+
+

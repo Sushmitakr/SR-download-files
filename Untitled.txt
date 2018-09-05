@@ -1,0 +1,59 @@
+https://career5.successfactors.eu/portalcareer?_s.crb=NQ789J0%252bTt7pgSPDZ8xhlGN83dU%253d
+
+Hi everyone,
+I am sushmita and I have worked on game manager service.
+And i been exposed to all technologies of backend(java spring boot), frontend(angular6) and database(mongo).
+Game manager service is responsible to create new games
+for single player timer based, multi player fastest fingure 
+first and adaptive game engine.
+ Game Creators can create different games based on the 
+ supported game types. For example, for the "Single Player
+ Timed-based Game Type", there can be games with varying
+ levels, scores, and marks.
+Lets assume one scenario of hiring candidates in any 
+organization where this service can be used.
+Say an organization has to hire few number of candidates
+of fresher level profile and team lead profile.
+So this is the place where we can use this service in
+creating games for hiring employees of beginner level as 
+well as experienced level also.
+For beginners the organisation can use our games designed for 
+beginner level i.e easy level
+And for hiring experienced people, organisation can use games
+designed for advanced level i.e using advanced questions
+and less time and negative marks on each wrong attempted 
+questions.
+
+2 types of Data Modelling is done for designing all the
+3 types of games.
+The main challenge I faced in modelling games was to 
+create games of different configurations,where questions
+are divided based on different levels.
+(i.e. easy level questions, medium level and advance level
+questions).
+And for each level of questions, score per question is 
+defined and time per question is defined.
+All questions of particular topic is sent by Question
+generator service.
+These questions are received by game manager and filtered 
+on the basis of game type requirements.
+Questions are filtered in such a way that it should not get
+repeated by any user and every user gets a new and unique questions sets.
+For communicating with all the 3 game engines and 
+recommended service landing page, rest templates url have been exposed
+so that all the game engines get all game data with
+(set of rules, description, levels, game name, score & 
+time per question) from here to be able to play games
+And also we are using Kafka for this.
+All the single player games and multi player games and adaptive games data 
+are stored in a single mongo database where for each type of games there is different 
+document collections.
+
+
+
+
+
+
+
+
+

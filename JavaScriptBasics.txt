@@ -1,0 +1,62 @@
+
+function a() {
+   y = 1;   
+   console.log(y);
+}
+
+function b(){
+	console.log(y);
+}
+a();
+b();
+
+
+
+
+var x = 0;
+
+function f(){
+  var x = y = 1; 
+  
+}
+f();
+console.log(x);
+console.log(y);
+
+
+
+
+
+
+var y=1;
+function a() {
+   console.log(y);
+   var y=2;
+ 
+}
+a();
+
+
+
+
+function f(){
+
+	   newf();
+
+  	  var newf=function(){
+  	  console.log("Hello world");
+  }
+}
+f();
+
+function f(){
+      newf();
+  	  function newf(){
+  	  console.log("Hello world");
+  }
+}
+f();
+
+
+
+

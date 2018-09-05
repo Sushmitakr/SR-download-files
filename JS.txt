@@ -1,0 +1,85 @@
+Predict Outputs
+
+function a() {
+   var y = 1;   
+   console.log(y);
+}
+function b(){
+ console.log(y);
+}
+a();
+b();
+
+
+********************
+
+
+
+********************
+var x = 0;
+
+function f(){
+  var x = y = 1; 
+  
+}
+f();
+console.log(x);
+console.log(y);
+
+
+********************
+
+
+function p(a, b) {
+  return a + b / 2;
+}
+console.log(p(2, 1));
+
+
+********************
+
+
+
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+console.log(foo1());
+console.log(foo2());
+*******************
+
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+
+
+************
+function sum(x) { 
+ console.log(x); 
+}
+sum(3,4);
+
+
+***********
+
+
+console.log(1 +  "2" + "2");
+console.log(1 +  +"2" + "2");
+console.log(1 +  -"1" + "2");
+console.log(+"1" +  "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+
+
